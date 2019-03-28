@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: Categories
+  link: /categories/
+- name: Archives
+  link: /archives/
+- name: Wiki
+  link: /wiki/
+- name: Projects
+  link: /projects/
+- name: About
+  link: /about/

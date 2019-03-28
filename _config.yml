@@ -1,0 +1,53 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Light Blog
+subtitle: "A simple and light Jekyll theme."
+keywords: Jekyll, Jekyll Theme, Blog
+description: This is a simple and light Jekyll theme.
+baseurl: "/light-blog"
+timezone: Asia/Shanghai
+side_bar_repo_limit: 5
+
+# Author settings
+author: Lynn
+organization: HUST-IDC
+organization_url: https://github.com/HUST-IDC
+github_username: lynn9388
+location: Wuhan, China
+email: lynn9388@gmail.com
+
+# Build settings
+paginate: 10 # number of aiticles on each page
+permalink: /:year/:month/:day/:title/
+collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+plugins:
+  - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+# Search settings
+simple_jekyll_search:
+  fulltext: false
+  limit: 10
+
+# Analytics settings
+google_analytics:
