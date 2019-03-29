@@ -49,5 +49,5 @@ simple_jekyll_search:
   fulltext: false
   limit: 10
 
-# Analytics settings
-google_analytics:
+# Google Analytics settings
+ga_measurement_id:
