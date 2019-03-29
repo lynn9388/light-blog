@@ -1,86 +1,100 @@
-    <footer class="container">
-        <div class="site-footer" role="contentinfo">
-            <div class="copyright left mobile-block">
-                    © <script>document.write(new Date().getFullYear())</script>
-                    <span title="{{ site.author}}">{{ site.author }}</span>
-                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
-            </div>
-
-            <ul class="site-footer-links right mobile-hidden">
-                <li>
-                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
-                </li>
-            </ul>
-            <a href="{{ site.github.repository_url }}" target="_blank" aria-label="view source code">
-                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
-            </a>
-            <ul class="site-footer-links mobile-hidden">
-                {% for item in site.data.navigation %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ item.link }}" title="{{ item.name }}">{{ item.name }}</a>
-                </li>
-                {% endfor %}
-                <li><a href="{{ site.baseurl }}/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
-            </ul>
-
+<footer class="container">
+    <div class="site-footer" role="contentinfo">
+        <div class="copyright left mobile-block">
+            © <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <span title="{{ site.author}}">{{ site.author }}</span>
+            <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
         </div>
-    </footer>
-    <div class="tools-wrapper">
-      <a class="gotop" href="#" title="Go to top"><span class="octicon octicon-arrow-up"></span></a>
+
+        <ul class="site-footer-links right mobile-hidden">
+            <li>
+                <a href="javascript:window.scrollTo(0,0)">TOP</a>
+            </li>
+        </ul>
+        <a href="{{ site.github.repository_url }}" target="_blank" aria-label="view source code">
+            <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+        </a>
+        <ul class="site-footer-links mobile-hidden">
+            {% for item in site.data.navigation %}
+            <li>
+                <a href="{{ site.baseurl }}{{ item.link }}" title="{{ item.name }}">{{ item.name }}</a>
+            </li>
+            {% endfor %}
+            <li><a href="{{ site.baseurl }}/feed.xml"><span class="octicon octicon-rss"
+                        style="color:orange;"></span></a>
+            </li>
+        </ul>
     </div>
-    <!-- / footer -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js" integrity="sha256-AOyAcXCKLfI+FRdiZr4VTj9h9Wwv0YXXa2CPfUWbBS8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" integrity="sha256-jc6y1s/Y+F+78EgCT/lI2lyU7ys+PFYrRSJ6q8/R8+o=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" integrity="sha256-N1K43s+8twRa+tzzoF3V8EgssdDiZ6kd9r8Rfgg8kZU=" crossorigin="anonymous" />
-    <script>
-      jQuery(document).ready(function($) {
+</footer>
+
+<div class="tools-wrapper">
+    <a class="gotop" href="#" title="Go to top"><span class="octicon octicon-arrow-up"></span></a>
+</div>
+<!-- / footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js" integrity="sha256-AOyAcXCKLfI+FRdiZr4VTj9h9Wwv0YXXa2CPfUWbBS8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" integrity="sha256-jc6y1s/Y+F+78EgCT/lI2lyU7ys+PFYrRSJ6q8/R8+o=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" integrity="sha256-N1K43s+8twRa+tzzoF3V8EgssdDiZ6kd9r8Rfgg8kZU=" crossorigin="anonymous" />
+<script>
+    jQuery(document).ready(function ($) {
         // geopattern
-        $('.geopattern').each(function(){
-          $(this).geopattern($(this).data('pattern-id'));
+        $('.geopattern').each(function () {
+            $(this).geopattern($(this).data('pattern-id'));
         });
-       // hljs.initHighlightingOnLoad();
-      });
-    </script>
+        // hljs.initHighlightingOnLoad();
+    });
+</script>
 
-    {% if page.mermaid %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" integrity="sha256-0w92bcB21IY5+rGI84MGj52jNfHNbXVeQLrZ0CGdjNY=" crossorigin="anonymous"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-    {% endif %}
+{% if page.mermaid %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" integrity="sha256-0w92bcB21IY5+rGI84MGj52jNfHNbXVeQLrZ0CGdjNY=" crossorigin="anonymous"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true
+    });
+</script>
+{% endif %}
 
-    {% if page.sequence %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js" integrity="sha256-hugbUSlFfmNmcAF+2EG07z+F4+4Vn6ya6nnakTNaTF8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurleurl }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.js"></script>
-    <link rel="stylesheet" href="{{ site.baseurleurl }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.css">
+{% if page.sequence %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js" integrity="sha256-hugbUSlFfmNmcAF+2EG07z+F4+4Vn6ya6nnakTNaTF8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+<script src="{{ site.baseurleurl }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.js"></script>
+<link rel="stylesheet" href="{{ site.baseurleurl }}/assets/vendor/js-sequence-diagrams/dist/sequence-diagram-min.css">
+<script>
+    $(".language-sequence").sequenceDiagram({
+        theme: 'simple'
+    });
+</script>
+{% endif %}
+
+{% if page.flow %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.8/raphael.min.js" integrity="sha256-BgmwZ6j044t3GCQhmJtpiHkUGVYzjapcGWjBH4dVnes=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.11.3/flowchart.min.js" integrity="sha256-YwLJwQt+hT+c1DCOHreZPY6kKlXl6UNOkKhDodA7Wqw=" crossorigin="anonymous"></script>
+<script src="{{ site.baseurleurl }}/assets/js/flow.js"></script>
+{% endif %}
+
+{% if page.mathjax %}
+<script type="text/javascript" src="https://basis-learning.github.io/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
+
+{% if site.google_analytics %}
+<div style="display:none">
     <script>
-      $(".language-sequence").sequenceDiagram({theme: 'simple'});
-    </script>
-    {% endif %}
-
-    {% if page.flow %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.8/raphael.min.js" integrity="sha256-BgmwZ6j044t3GCQhmJtpiHkUGVYzjapcGWjBH4dVnes=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.11.3/flowchart.min.js" integrity="sha256-YwLJwQt+hT+c1DCOHreZPY6kKlXl6UNOkKhDodA7Wqw=" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurleurl }}/assets/js/flow.js"></script>
-    {% endif %}
-
-    {% if page.mathjax %}
-    <script type="text/javascript" src="https://basis-learning.github.io/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    {% endif %}
-
-    {% if site.google_analytics %}
-    <div style="display:none">
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
-
-      </script>
-    </div>
-    {% endif %}
-</body>
-</html>
+    </script>
+</div>
+{% endif %}
