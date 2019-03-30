@@ -1,3 +1,13 @@
-{% include header.html %}
-    {{ content }}
-{% include footer.html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    {% include head.html %}
+    <body class="{{ page.class }}">
+        {% include header.html %}
+        <main>
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </main>
+        {% include footer.html %}
+    </body>
+</html>
