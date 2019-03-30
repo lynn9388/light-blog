@@ -2,7 +2,6 @@
 layout: wiki
 title: Markdown
 categories: Markdown
-flow: true
 mathjax: true
 ---
 
@@ -145,22 +144,6 @@ print 'Hello, World!'
 ### Footnotes
 
 This is a text with footnote[^1].
-
-### flowchart
-
-```flow
-st=>start: Start
-e=>end
-op1=>operation: My Operation
-sub1=>subroutine: My Subroutine
-cond=>condition: Yes
-or No?
-io=>inputoutput: catch something...
-
-st->op1->cond
-cond(yes)->io->e
-cond(no)->sub1(right)->op1
-```
 
 ### mathjax
 
