@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Open Source Projects
+title: Projects
 permalink: /projects/
 ---
 
