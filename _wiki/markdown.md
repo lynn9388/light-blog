@@ -2,7 +2,6 @@
 layout: wiki
 title: Markdown
 categories: Markdown
-mathjax: true
 ---
 
 **目录**
