@@ -2,7 +2,6 @@
 layout: wiki
 title: Markdown
 categories: Markdown
-sequence: true
 flow: true
 mathjax: true
 ---
@@ -146,15 +145,6 @@ print 'Hello, World!'
 ### Footnotes
 
 This is a text with footnote[^1].
-
-### sequence
-
-```sequence
-Andrew->China: Says Hello
-Note right of China: China thinks\nabout it
-China-->Andrew: How are you?
-Andrew->>China: I am good thanks!
-```
 
 ### flowchart
 
