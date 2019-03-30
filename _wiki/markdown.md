@@ -2,7 +2,6 @@
 layout: wiki
 title: Markdown
 categories: Markdown
-mermaid: true
 sequence: true
 flow: true
 mathjax: true
@@ -147,14 +146,6 @@ print 'Hello, World!'
 ### Footnotes
 
 This is a text with footnote[^1].
-
-### mermaid
-
-<div class="mermaid">
-sequenceDiagram
-    Alice-->>John: Hello John, how are you?
-    John-->>Alice: Great!
-</div>
 
 ### sequence
 
