@@ -15,7 +15,6 @@
 # in the templates via {{ site.myvariable }}.
 title: Light Blog
 subtitle: "A simple and light Jekyll theme."
-keywords: Jekyll, Jekyll Theme, Blog
 description: This is a simple and light Jekyll theme.
 baseurl: "/light-blog"
 timezone: Asia/Shanghai
