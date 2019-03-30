@@ -5,6 +5,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
 
     {% seo %}
+    {% feed_meta %}
+    {% if site.ga_measurement_id %}
+        {% include google-analytics.html %}
+    {% endif %}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/3.0.1/css/primer.css" integrity="sha256-I1bA+6IrEoclfzXmN3hhxUi8IgJL+zOhA1TLSPwlR14=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css" integrity="sha256-/HXDwfKKg4bbl0dhRI5eWPbqL+ZYeu3AALaaAMkxYIs=" crossorigin="anonymous">
