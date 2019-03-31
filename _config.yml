@@ -19,6 +19,7 @@ description: This is a simple and light Jekyll theme.
 baseurl: "/light-blog"
 timezone: Asia/Shanghai
 side_bar_repo_limit: 5
+paginate: 10
 
 # Author settings
 author: Lynn
@@ -29,12 +30,17 @@ location: Wuhan, China
 email: lynn9388@gmail.com
 
 # Build settings
-paginate: 10 # number of aiticles on each page
+encoding: UTF-8
+markdown: kramdown
 permalink: /:year/:month/:day/:title/
 collections:
   wiki:
     output: true
     permalink: /wiki/:path/
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-github-metadata
@@ -42,6 +48,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
+  - rouge
 
 # Search settings
 simple_jekyll_search:
