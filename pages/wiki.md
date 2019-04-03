@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Wiki
-comments: false
 permalink: /wiki/
 ---
 

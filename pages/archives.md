@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Archives
-comments: false
 permalink: /archives/
 ---
 
