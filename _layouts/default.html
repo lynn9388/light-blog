@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
     {% include head.html %}
-    <body class="{{ page.class }}">
+    <body>
         {% include header.html %}
-        <main>
-            <div class="wrapper">
-                {{ content }}
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="https://via.placeholder.com/1200x50" class="img-fluid" alt="This is title bar.">
+                    </div>
+                </div>
             </div>
-        </main>
-        {% include footer.html %}
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="https://via.placeholder.com/1000x1000" class="img-fluid" alt="This is content.">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/400x800" class="img-fluid" alt="This is sidebar.">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <img src="https://via.placeholder.com/1200x50" class="img-fluid" alt="This is footer.">
+            </div>
+        </footer>
     </body>
 </html>

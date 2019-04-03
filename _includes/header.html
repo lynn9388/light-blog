@@ -1,24 +1,22 @@
-<header class="site-header">
+<header>
     <div class="container">
-        <h1>
-            <a href="{{ site.baseurl }}/" title="{{ site.title }}">
-                <span class="octicon octicon-mark-github"></span>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="#">
+                <span class="iconify" data-icon="octicon:mark-github"></span>
                 {{ site.title }}
             </a>
-        </h1>
 
-        <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <nav class="site-header-nav" role="navigation">
-            {% for item in site.data.navigation %}
-            <a href="{{ site.baseurl }}{{ item.link }}"
-                class="{% if page.title == item.name %} selected {% endif %} site-header-nav-item"
-                title="{{ item.name }}">{{ item.name }}</a>
-            {% endfor %}
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav ml-auto">
+                    {% for item in site.data.navigation %}
+                        <a class="nav-item nav-link text-right" href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
         </nav>
     </div>
 </header>
