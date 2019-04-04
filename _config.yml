@@ -25,9 +25,10 @@ paginate: 10
 author: Lynn
 organization: HUST-IDC
 organization_url: https://github.com/HUST-IDC
-github_username: lynn9388
 location: Wuhan, China
-email: lynn9388@gmail.com
+social:
+  github: lynn9388
+  email: lynn9388@gmail.com
 
 # Build settings
 encoding: UTF-8
