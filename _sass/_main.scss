@@ -1,0 +1,11 @@
+$primary-color: #4183c4;
+$secondary-color: #d26911;
+
+.header-home {
+    background: $primary-color;
+    border-bottom: 2px solid $primary-color;
+}
+
+.nav-item-active {
+    border-bottom: 2px solid $secondary-color;
+}

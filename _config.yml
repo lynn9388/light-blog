@@ -42,6 +42,8 @@ kramdown:
   input: GFM
   math_engine: mathjax
   syntax_highlighter: rouge
+sass:
+  style: compressed
 plugins:
   - jekyll-feed
   - jekyll-github-metadata
