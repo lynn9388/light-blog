@@ -1,7 +1,7 @@
 <header>
     <div class="container">
-        <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="#">
+        <nav class="navbar navbar-expand-md px-0">
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
                 <span class="iconify" data-icon="octicon:mark-github"></span>
                 {{ site.title }}
             </a>
@@ -20,3 +20,13 @@
         </nav>
     </div>
 </header>
+
+<script>
+    {% if page.url == "/" %}
+        $("header").addClass("header-home");
+        $(".navbar").addClass("navbar-dark");
+    {% else %}
+        $(".navbar").addClass("navbar-light");
+        $("a[href$='{{ site.baseurl }}{{ page.url }}']").addClass("nav-item-active");
+    {% endif %}
+</script>

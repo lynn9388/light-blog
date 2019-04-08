@@ -1,0 +1,8 @@
+.header-home {
+    background: #4183c4;
+    border-bottom: 2px solid #4183c4;
+}
+
+.nav-item-active {
+    border-bottom: 2px solid #d26911;
+}
