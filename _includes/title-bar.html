@@ -1,7 +1,7 @@
 <div class="title-bar mb-2">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-md-9">
                 {% if page.url == "/" %}
                     <!-- Home page title -->
                     <div class="title-home pt-sm-3 pt-md-4">{{ site.subtitle }}</div>
@@ -29,10 +29,25 @@
                     </div>
                 {% elsif page.layout == "post" %}
                     <!-- Post article title -->
-                    {{ page.title }}
+                    <div class="title-bar-title pt-3">{{ page.title }}</div>
+                    <div class="pb-3">
+                        <span class="title-bar-info pr-3">
+                            {% if page.date %}
+                                <span class="iconify" data-icon="octicon:calendar"></span>
+                                <span>{{ page.date | date: "%Y/%m/%d" }}</span>
+                            {% endif %}
+                        </span>
+
+                        {% for category in page.categories %}
+                            <span class="title-bar-info pr-3">
+                                <span class="iconify" data-icon="octicon:tag"></span>
+                                <a class="title-bar-link" href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+                            </span>
+                        {% endfor %}
+                    </div>
                 {% else %}
                     <!-- Default title -->
-                    <div class="title-bar-title py-2 py-sm-3 py-md-4">{{ page.title }}</div>
+                    <div class="title-bar-title py-1 py-sm-2 py-md-3">{{ page.title }}</div>
                 {% endif %}
             </div>
         </div>
