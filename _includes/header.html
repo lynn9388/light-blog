@@ -1,9 +1,9 @@
 <header>
     <div class="container">
-        <nav class="navbar navbar-expand-md px-0">
-            <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <nav class="navbar navbar-expand-md px-0 py-2">
+            <a class="navbar-brand title-home p-0" href="{{ site.baseurl }}/">
                 <span class="iconify" data-icon="octicon:mark-github"></span>
-                {{ site.title }}
+                <span>{{ site.title }}</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +27,6 @@
         $(".navbar").addClass("navbar-dark");
     {% else %}
         $(".navbar").addClass("navbar-light");
-        $("a[href$='{{ site.baseurl }}{{ page.url }}']").addClass("nav-item-active");
+        $("a[href$='{{ site.baseurl }}{{ page.url }}']").addClass("active");
     {% endif %}
 </script>
