@@ -24,7 +24,6 @@ paginate: 10
 # Author settings
 author: Lynn
 organization: HUST-IDC
-organization_url: https://github.com/HUST-IDC
 location: Wuhan, China
 social:
   github: lynn9388

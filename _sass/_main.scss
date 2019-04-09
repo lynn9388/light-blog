@@ -11,3 +11,61 @@ $secondary-color: #d26911;
 .nav-item-active {
     border-bottom: 2px solid $secondary-color;
 }
+
+.title-bar {
+    color: white;
+    background: $primary-color;
+}
+
+.title-home, .title-bar-title {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.title-bar-info {
+    font-size: 12px;
+    font-weight: 200;
+    display: inline-block;
+}
+
+a.title-bar-link {
+    color: inherit;
+}
+
+@include media-breakpoint-up(sm) {
+    .title-home, .title-bar-title {
+      font-size: 24px;
+    }
+
+    .title-bar-info {
+        font-size: 13px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .title-home {
+        font-size: 30px;
+      }
+
+      .title-bar-title {
+      font-size: 28px;
+    }
+
+    .title-bar-info {
+        font-size: 14px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .title-home {
+      font-size: 38px;
+    }
+
+    .title-bar-title {
+      font-size: 32px;
+    }
+
+    .title-bar-info {
+        font-size: 16px;
+    }
+}
