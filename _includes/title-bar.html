@@ -1,5 +1,5 @@
 <div class="title-bar mb-2">
-    <div class="container py-2 py-sm-3 py-md-4">
+    <div class="container">
         <div class="row">
             <div class="col">
                 {% if page.url == "/" %}
@@ -7,7 +7,7 @@
                 {% elsif page.layout == "post" %}
                     {% include title-bar/home.html %}
                 {% else %}
-                    <div class="title-bar-title">{{ page.title }}</div>
+                    <div class="title-bar-title py-2 py-sm-3 py-md-4">{{ page.title }}</div>
                 {% endif %}
             </div>
         </div>
