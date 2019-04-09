@@ -3,17 +3,8 @@ $secondary: #d26911;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.header-home {
-    background: $primary;
-}
-
 .nav-item.active {
     border-bottom: 2px solid $secondary;
-}
-
-.title-bar {
-    color: white;
-    background: $primary;
 }
 
 .title-home, .title-bar-title {
@@ -25,10 +16,6 @@ $secondary: #d26911;
     font-size: 12px;
     font-weight: 200;
     display: inline-block;
-}
-
-a.title-bar-link {
-    color: inherit;
 }
 
 @include media-breakpoint-up(sm) {
@@ -46,7 +33,7 @@ a.title-bar-link {
         font-size: 30px;
       }
 
-      .title-bar-title {
+    .title-bar-title {
       font-size: 28px;
     }
 
