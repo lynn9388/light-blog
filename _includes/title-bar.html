@@ -3,10 +3,35 @@
         <div class="row">
             <div class="col">
                 {% if page.url == "/" %}
-                    {% include title-bar/home.html %}
+                    <!-- Home page title -->
+                    <div class="title-home pt-sm-3 pt-md-4">{{ site.subtitle }}</div>
+                    <div class="pb-1 pb-sm-2 pb-md-3 pb-lg-4">
+                        <span class="title-bar-info pr-3">
+                            {% if site.social.github %}
+                                <span class="iconify" data-icon="octicon:mark-github"></span>
+                                <a class="title-bar-link" href="https://github.com/{{ site.social.github }}"><span>{{ site.social.github }}</span></a>
+                            {% endif %}
+                        </span>
+
+                        <span class="title-bar-info pr-3">
+                            {% if site.organization %}
+                                <span class="iconify" data-icon="octicon:organization"></span>
+                                <a class="title-bar-link" href="https://github.com/{{ site.organization }}"><span>{{ site.organization }}</span></a>
+                            {% endif %}
+                        </span>
+
+                        <span class="title-bar-info pr-3">
+                            {% if site.location %}
+                                <span class="iconify" data-icon="octicon:location"></span>
+                                <span>{{ site.location }}</span>
+                            {% endif %}
+                        </span>
+                    </div>
                 {% elsif page.layout == "post" %}
-                    {% include title-bar/home.html %}
+                    <!-- Post article title -->
+                    {{ page.title }}
                 {% else %}
+                    <!-- Default title -->
                     <div class="title-bar-title py-2 py-sm-3 py-md-4">{{ page.title }}</div>
                 {% endif %}
             </div>
@@ -15,9 +40,7 @@
 </div>
 
 <script>
-    {% if page.url == "/" %}
-        $(".title-bar").addClass("title-bar-home");
-    {% else %}
+    {% if page.url != "/" %}
         $(".title-bar").attr("id", "geopattern");
     {% endif %}
 
