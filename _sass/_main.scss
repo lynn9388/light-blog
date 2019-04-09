@@ -1,19 +1,19 @@
+$primary: #4183c4;
+$secondary: #d26911;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-$primary-color: #4183c4;
-$secondary-color: #d26911;
-
 .header-home {
-    background: $primary-color;
+    background: $primary;
 }
 
 .nav-item.active {
-    border-bottom: 2px solid $secondary-color;
+    border-bottom: 2px solid $secondary;
 }
 
 .title-bar {
     color: white;
-    background: $primary-color;
+    background: $primary;
 }
 
 .title-home, .title-bar-title {
