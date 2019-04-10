@@ -45,3 +45,24 @@ $secondary: #d26911;
         font-size: 16px;
     }
 }
+
+.post-list {
+    font-weight: 300;
+    list-style-type: none;
+    max-width: 600px;
+}
+
+.post-list .title {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+}
+
+.post-list .excerpt {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 8px;
+}
+
+.post-list .info {
+    font-size: 0.8rem;
+}
