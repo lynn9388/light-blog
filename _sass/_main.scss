@@ -15,57 +15,75 @@ body {
     border-bottom: 2px solid $secondary;
 }
 
-/* Title bar on top */
-.title-home,
-.title-bar-title {
+/* Header */
+header .title {
     font-size: 20px;
     font-weight: 300;
 }
 
-.title-bar-info {
-    font-size: 12px;
-    font-weight: 200;
-    display: inline-block;
+/* Title bar */
+.title-bar {
+    .title, .title-big {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .meta {
+        font-size: 12px;
+        font-weight: 200;
+        display: inline-block;
+    }
 }
 
 @include media-breakpoint-up(sm) {
-    .title-home,
-    .title-bar-title {
+    header .title {
         font-size: 28px;
     }
 
-    .title-bar-info {
-        font-size: 14px;
+    .title-bar {
+        .title, .title-big {
+            font-size: 28px;
+        }
+
+        .meta {
+            font-size: 14px;
+        }
     }
 }
 
 @include media-breakpoint-up(md) {
-    .title-home {
+    header .title {
         font-size: 34px;
     }
 
-    .title-bar-title {
-        font-size: 32px;
-    }
+    .title-bar {
+        .title {
+            font-size: 32px;
+        }
 
-    .title-bar-info {
-        font-size: 16px;
+        .title-big {
+            font-size: 34px;
+        }
+
+        .meta {
+            font-size: 16px;
+        }
     }
 }
 
-/* Post list in home page */
+/* Post list */
 .post-list {
     list-style-type: none;
 
     .title {
-        font-size: 26px;
+        font-size: 18px;
         font-weight: bold;
         margin-bottom: 20px;
     }
 
     .excerpt {
         font-family: 'Times New Roman', sans-serif;
-        font-size: 20px;
+        font-size: 16px;
         margin-bottom: 8px;
     }
 
@@ -82,7 +100,7 @@ body {
     }
 }
 
-/* Repository card in sidebar */
+/* Repository card */
 .repo-card {
     width: 100%;
     opacity: .8;
