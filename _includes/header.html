@@ -22,7 +22,7 @@
 </header>
 
 <script>
-    {% if page.url == "/" %}
+    {% if page.layout == "home" %}
         $("header").addClass("bg-primary");
         $(".navbar").addClass("navbar-dark");
     {% else %}
