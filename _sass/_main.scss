@@ -3,6 +3,10 @@ $secondary: #d26911;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.container {
+    max-width: var(--breakpoint-lg);
+ }
+
 .nav-item.active {
     border-bottom: 2px solid $secondary;
 }
@@ -20,20 +24,6 @@ $secondary: #d26911;
 
 @include media-breakpoint-up(sm) {
     .title-home, .title-bar-title {
-      font-size: 24px;
-    }
-
-    .title-bar-info {
-        font-size: 13px;
-    }
-}
-
-@include media-breakpoint-up(md) {
-    .title-home {
-        font-size: 30px;
-      }
-
-    .title-bar-title {
       font-size: 28px;
     }
 
@@ -42,10 +32,10 @@ $secondary: #d26911;
     }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
     .title-home {
-      font-size: 38px;
-    }
+        font-size: 34px;
+      }
 
     .title-bar-title {
       font-size: 32px;
