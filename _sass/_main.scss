@@ -9,13 +9,15 @@ body {
 
 .container {
     max-width: var(--breakpoint-lg);
- }
+}
 
 .nav-item.active {
     border-bottom: 2px solid $secondary;
 }
 
-.title-home, .title-bar-title {
+/* Title bar on top */
+.title-home,
+.title-bar-title {
     font-size: 20px;
     font-weight: 300;
 }
@@ -27,8 +29,9 @@ body {
 }
 
 @include media-breakpoint-up(sm) {
-    .title-home, .title-bar-title {
-      font-size: 28px;
+    .title-home,
+    .title-bar-title {
+        font-size: 28px;
     }
 
     .title-bar-info {
@@ -39,10 +42,10 @@ body {
 @include media-breakpoint-up(md) {
     .title-home {
         font-size: 34px;
-      }
+    }
 
     .title-bar-title {
-      font-size: 32px;
+        font-size: 32px;
     }
 
     .title-bar-info {
@@ -50,22 +53,58 @@ body {
     }
 }
 
+/* Post list in home page */
 .post-list {
     list-style-type: none;
+
+    .title {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .excerpt {
+        font-family: 'Times New Roman', sans-serif;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
 }
 
-.post-list .title {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
+/* Sidebar */
+.sidebar {
+    .name {
+        font-size: 16px;
+        font-weight: bold;
+    }
 }
 
-.post-list .excerpt {
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 20px;
-    margin-bottom: 8px;
+/* Repository card in sidebar */
+.repo-card {
+    width: 100%;
+    opacity: .8;
+    font-size: 12px;
+
+    .name {
+        height: 120px;
+        font-size: 24px;
+    }
+
+    .description {
+        line-height: 1.75em;
+        height: 3.5em;
+        overflow: hidden;
+    }
 }
 
-.post-list .info {
-    font-size: 14px;
+.repo-card:hover {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(33, 33, 33, .2);
+}
+
+.repo-card.btn {
+    border: none;
 }

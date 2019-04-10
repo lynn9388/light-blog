@@ -1,0 +1,30 @@
+{% if page.layout != "post" and page.layout != "wiki" and page.url != "/categories/" %}
+    {% if site.github.public_repositories != null %}
+        <span class="name">My Popular Repositories</span>
+        {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
+        <div class="container">
+            <div class="row">
+                {% for repo in repos | limit: site.side_bar_repo_limit %}
+                    <div class="col-12 col-sm-6 col-md-12 px-0 px-sm-1 px-md-0 py-2">
+                        <a class="repo-card btn rounded p-0" href="{{ repo.html_url }}">
+                            <div class="card p-1">
+                                <div class="name rounded d-flex justify-content-center align-items-center text-light geopattern" data-pattern-id="{{ repo.name }}">
+                                    {{ repo.name }}
+                                </div>
+                                <span class="description mt-2 mx-2">{{ repo.description }}</span>
+                                <div>
+                                    <span class="iconify" data-icon="octicon:star"></span>
+                                    <span class="pr-2">{{ repo.stargazers_count }}</span>
+                                    <span class="iconify" data-icon="octicon:repo-forked"></span>
+                                    <span class="pr-2">{{ repo.forks_count }}</span>
+                                    <span class="iconify" data-icon="octicon:clock"></span>
+                                    <span>{{ repo.updated_at | date: '%Y-%m-%d' }}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
