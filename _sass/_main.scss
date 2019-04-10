@@ -3,6 +3,10 @@ $secondary: #d26911;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
 .container {
     max-width: var(--breakpoint-lg);
  }
@@ -47,22 +51,21 @@ $secondary: #d26911;
 }
 
 .post-list {
-    font-weight: 300;
     list-style-type: none;
-    max-width: 600px;
 }
 
 .post-list .title {
-    font-size: 1.75rem;
-    margin-bottom: 16px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .post-list .excerpt {
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
 .post-list .info {
-    font-size: 0.8rem;
+    font-size: 14px;
 }

@@ -6,12 +6,12 @@ layout: default
     {% for post in paginator.posts %}
         <li class="py-3">
             <a class="title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <div class="excerpt" class="text-muted">{{ post.excerpt | strip_html | strip | truncate: 300 }}</div>
-            <div class="info" class="text-muted">
+            <div class="excerpt" class="text-muted">{{ post.excerpt | strip_html | strip | truncate: 250 }}</div>
+            <div class="info">
                 <span class="pr-3">
                     {% if post.date %}
                         <span class="iconify" data-icon="octicon:calendar"></span>
-                        <span>{{ post.date | date: "%Y/%m/%d" }}</span>
+                        <span class="text-muted">{{ post.date | date: "%Y/%m/%d" }}</span>
                     {% endif %}
                 </span>
 
