@@ -1,4 +1,4 @@
-<div class="title-bar bg-primary text-light mb-4">
+<div class="title-bar text-light mb-4" data-pattern-id="{{ page.title }}">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -55,9 +55,9 @@
 </div>
 
 <script>
-    {% if page.layout != "home" %}
-        $(".title-bar").attr("id", "geopattern");
+    {% if page.layout == "home" %}
+        $(".title-bar").addClass("bg-primary");
+    {% else %}
+        $(".title-bar").addClass("geopattern");
     {% endif %}
-
-    $("#geopattern").geopattern("{{ page.title }}");
 </script>
