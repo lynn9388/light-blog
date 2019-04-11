@@ -15,6 +15,16 @@ body {
     border-bottom: 2px solid $secondary;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    * {
+        max-width: 100%;
+    }
+}
+
 /* Header */
 header .title {
     font-size: 20px;
@@ -103,17 +113,25 @@ header .title {
 /* Repository card */
 .repo-card {
     width: 100%;
-    opacity: .8;
-    font-size: 12px;
 
     .name {
         height: 120px;
         font-size: 24px;
     }
 
+    .info {
+        height: 80px;
+        font-size: 12px;
+        opacity: .8;
+
+        .iconify {
+            font-size: 14px;
+        }
+    }
+
     .description {
-        line-height: 1.75em;
-        height: 3.5em;
+        line-height: 1.5em;
+        max-height: 3em;
         overflow: hidden;
     }
 }
