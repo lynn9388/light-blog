@@ -126,3 +126,26 @@ header .title {
 .repo-card.btn {
     border: none;
 }
+
+/* Return to top button */
+.return-to-top {
+    font-size: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px lightgray solid;
+    display: none;
+    opacity: 0.8;
+}
+
+.return-to-top:hover {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(33, 33, 33, .2);
+ }
+
+ .return-to-top:focus {
+     outline: none;
+ }
