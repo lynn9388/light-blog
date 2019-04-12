@@ -1,19 +1,24 @@
+// Override Bootstrap's variables
+// Must come before importing Bootstrap
 $primary: #4183c4;
 $secondary: #d26911;
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Custom variables
 $sidebar-border: 1px solid lightgray;
 $sidebar-border-radius: .25rem;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
 
-/* Disable breakpoint of large screen */
+// Global style
+
+// Disable breakpoint of large screen
 .container {
     max-width: var(--breakpoint-lg);
 }
 
-.nav-item.active {
-    border-bottom: 2px solid $secondary;
-}
-
+// Center content in a element
 .center {
     display: flex;
     justify-content: center;
@@ -24,7 +29,9 @@ $sidebar-border-radius: .25rem;
     }
 }
 
-/* Header */
+
+// Header
+
 header {
     font-family: "Quattrocento Sans", sans-serif;
 
@@ -34,7 +41,14 @@ header {
     }
 }
 
-/* Title bar */
+// Add underline to navigation item
+.nav-item.active {
+    border-bottom: 2px solid theme-color(secondary);
+}
+
+
+// Title bar
+
 .title-bar {
     font-family: "Quattrocento Sans", sans-serif;
 
@@ -89,7 +103,9 @@ header {
     }
 }
 
-/* Post list */
+
+// Post list
+
 .post-list {
     list-style-type: none;
 
@@ -108,7 +124,9 @@ header {
     }
 }
 
-/* Sidebar */
+
+// Sidebar
+
 .sidebar {
     .name {
         font-size: 16px;
@@ -116,7 +134,9 @@ header {
     }
 }
 
-/* Repository card */
+
+// Repository card
+
 .repo-card {
     width: 100%;
 
@@ -151,7 +171,9 @@ header {
     border: none;
 }
 
-/* Table of contents */
+
+// Table of contents
+
 .toc {
     top: 42px;
 }
@@ -160,7 +182,7 @@ nav[data-toggle="toc"] {
     border: $sidebar-border;
     border-radius: $border-radius;
 
-    /* Expand nested second-level navigation item */
+    // Expand nested second-level navigation item
     .nav .nav {
         display: block;
     }
