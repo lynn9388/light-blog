@@ -5,10 +5,7 @@ $sidebar-border-radius: .25rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-body {
-    font-family: 'Quattrocento Sans', sans-serif;
-}
-
+/* Disable breakpoint of large screen */
 .container {
     max-width: var(--breakpoint-lg);
 }
@@ -28,14 +25,21 @@ body {
 }
 
 /* Header */
-header .title {
-    font-size: 20px;
-    font-weight: 300;
+header {
+    font-family: "Quattrocento Sans", sans-serif;
+
+    .title {
+        font-size: 20px;
+        font-weight: 300;
+    }
 }
 
 /* Title bar */
 .title-bar {
-    .title, .title-big {
+    font-family: "Quattrocento Sans", sans-serif;
+
+    .title,
+    .title-big {
         font-size: 20px;
         font-weight: 300;
     }
@@ -53,7 +57,9 @@ header .title {
     }
 
     .title-bar {
-        .title, .title-big {
+
+        .title,
+        .title-big {
             font-size: 28px;
         }
 
@@ -89,12 +95,10 @@ header .title {
 
     .title {
         font-size: 18px;
-        font-weight: bold;
         margin-bottom: 20px;
     }
 
     .excerpt {
-        font-family: 'Times New Roman', sans-serif;
         font-size: 16px;
         margin-bottom: 8px;
     }
@@ -108,7 +112,6 @@ header .title {
 .sidebar {
     .name {
         font-size: 16px;
-        font-weight: bold;
         margin-bottom: 6px;
     }
 }
