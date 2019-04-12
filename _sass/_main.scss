@@ -1,5 +1,7 @@
 $primary: #4183c4;
 $secondary: #d26911;
+$sidebar-border: 1px solid lightgray;
+$sidebar-border-radius: .25rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -107,6 +109,7 @@ header .title {
     .name {
         font-size: 16px;
         font-weight: bold;
+        margin-bottom: 6px;
     }
 }
 
@@ -143,4 +146,20 @@ header .title {
 
 .repo-card.btn {
     border: none;
+}
+
+/* Table of contents */
+nav[data-toggle="toc"] {
+    top: 42px;
+    border: $sidebar-border;
+    border-radius: $border-radius;
+
+    /* Expand nested second-level navigation item */
+    .nav .nav {
+        display: block;
+    }
+
+    ul {
+        padding: 1px 4px;
+    }
 }
