@@ -149,8 +149,11 @@ header .title {
 }
 
 /* Table of contents */
-nav[data-toggle="toc"] {
+.toc {
     top: 42px;
+}
+
+nav[data-toggle="toc"] {
     border: $sidebar-border;
     border-radius: $border-radius;
 

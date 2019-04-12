@@ -3,41 +3,48 @@
     <script>
         // Add TOC in sidebar if the article contains any heading
         if ($("article h1, article  h2, article h3, article h4, article h5, article h6").length > 0) {
-            $(".sidebar").append("<p class='name'>Table of Contents</p> <nav id='toc' data-toggle='toc' class='sticky-top py-2'></nav>");
+            $(".sidebar").append(`
+                <div class="toc sticky-top">
+                    <p class="name">Table of Contents</p>
+                    <nav id="toc" data-toggle="toc" class="py-2"></nav>
+                </div>
+            `);
         }
     </script>
 {% endif %}
 
 {% if page.layout != "post" and page.layout != "wiki" and page.url != "/categories/" %}
     {% if site.github.public_repositories != null %}
-        <p class="name">My Popular Repositories</p>
-        {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
-        <div class="container">
-            <div class="row">
-                {% for repo in repos | limit: site.side_bar_repo_limit %}
-                    <div class="col-12 col-sm-6 col-md-12 px-0 px-sm-1 px-md-0 pb-3">
-                        <a class="repo-card btn rounded p-0" href="{{ repo.html_url }}">
-                            <div class="card p-1">
-                                <div class="name rounded center text-light geopattern" data-pattern-id="{{ repo.name }}">
-                                    {{ repo.name }}
-                                </div>
-                                <div class="info center">
-                                    <div class="p-2">
-                                        <div class="description mb-2">{{ repo.description }}</div>
-                                        <div>
-                                            <span class="iconify" data-icon="octicon:star"></span>
-                                            <span class="pr-3">{{ repo.stargazers_count }}</span>
-                                            <span class="iconify" data-icon="octicon:repo-forked"></span>
-                                            <span class="pr-3">{{ repo.forks_count }}</span>
-                                            <span class="iconify" data-icon="octicon:clock"></span>
-                                            <span>{{ repo.updated_at | date: '%Y-%m-%d' }}</span>
+        <div class="repo-list">
+            <p class="name">My Popular Repositories</p>
+            {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
+            <div class="container">
+                <div class="row">
+                    {% for repo in repos | limit: site.side_bar_repo_limit %}
+                        <div class="col-12 col-sm-6 col-md-12 px-0 px-sm-1 px-md-0 pb-3">
+                            <a class="repo-card btn rounded p-0" href="{{ repo.html_url }}">
+                                <div class="card p-1">
+                                    <div class="name rounded center text-light geopattern" data-pattern-id="{{ repo.name }}">
+                                        {{ repo.name }}
+                                    </div>
+                                    <div class="info center">
+                                        <div class="p-2">
+                                            <div class="description mb-2">{{ repo.description }}</div>
+                                            <div>
+                                                <span class="iconify" data-icon="octicon:star"></span>
+                                                <span class="pr-3">{{ repo.stargazers_count }}</span>
+                                                <span class="iconify" data-icon="octicon:repo-forked"></span>
+                                                <span class="pr-3">{{ repo.forks_count }}</span>
+                                                <span class="iconify" data-icon="octicon:clock"></span>
+                                                <span>{{ repo.updated_at | date: '%Y-%m-%d' }}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                {% endfor %}
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     {% endif %}
