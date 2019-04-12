@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: post
 title: Markdown
 categories: Markdown
 ---
