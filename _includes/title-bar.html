@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                {% if page.layout == "home" %}
+                {% if page.name == "index.html" %}
                     <!-- Home page title -->
                     <div class="title-big pt-sm-3 pt-md-4">{{ site.subtitle }}</div>
                     <div class="meta pb-1 pb-2 pb-sm-3 pb-md-4">
@@ -27,7 +27,7 @@
                             {% endif %}
                         </span>
                     </div>
-                {% elsif page.layout == "post" %}
+                {% elsif page.collection == "posts" %}
                     <!-- Post article title -->
                     <div class="title pt-3">{{ page.title }}</div>
                     <div class="meta pb-3">
@@ -55,7 +55,7 @@
 </div>
 
 <script>
-    {% if page.layout == "home" %}
+    {% if page.name == "index.html" %}
         $(".title-bar").addClass("bg-primary");
     {% else %}
         $(".title-bar").addClass("geopattern");
