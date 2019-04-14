@@ -65,44 +65,6 @@ header {
     }
 }
 
-@include media-breakpoint-up(sm) {
-    header .title {
-        font-size: 28px;
-    }
-
-    .title-bar {
-
-        .title,
-        .title-big {
-            font-size: 28px;
-        }
-
-        .meta {
-            font-size: 14px;
-        }
-    }
-}
-
-@include media-breakpoint-up(md) {
-    header .title {
-        font-size: 34px;
-    }
-
-    .title-bar {
-        .title {
-            font-size: 32px;
-        }
-
-        .title-big {
-            font-size: 34px;
-        }
-
-        .meta {
-            font-size: 16px;
-        }
-    }
-}
-
 
 // Post list
 
@@ -211,5 +173,74 @@ nav[data-toggle="toc"] {
         top: 42px;
         position: sticky;
         position: -webkit-sticky;
+    }
+}
+
+
+// Category list
+
+.category-list {
+    .name {
+        font-size: 20px;
+    }
+
+    .post {
+        border-bottom: 1px dashed lightgray;
+
+        .date {
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 16px;
+        }
+    }
+}
+
+
+// Responsive text
+
+@include media-breakpoint-up(sm) {
+    header .title {
+        font-size: 28px;
+    }
+
+    .title-bar {
+        .title,
+        .title-big {
+            font-size: 28px;
+        }
+
+        .meta {
+            font-size: 14px;
+        }
+    }
+
+    .category-list .name {
+        font-size: 22px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    header .title {
+        font-size: 34px;
+    }
+
+    .title-bar {
+        .title {
+            font-size: 32px;
+        }
+
+        .title-big {
+            font-size: 34px;
+        }
+
+        .meta {
+            font-size: 16px;
+        }
+    }
+
+    .category-list .name {
+        font-size: 24px;
     }
 }
