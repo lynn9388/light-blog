@@ -176,6 +176,7 @@ header {
 
 .toc {
     top: 42px;
+    position: -webkit-sticky;
 }
 
 nav[data-toggle="toc"] {
