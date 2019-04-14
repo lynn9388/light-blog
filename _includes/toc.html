@@ -1,0 +1,13 @@
+{% if page.layout == "post" %}
+    <div class="toc d-none pb-3">
+        <p class="name">Table of Contents</p>
+        <nav id="toc" data-toggle="toc"></nav>
+    </div>
+{% endif %}
+
+<script>
+    // Show TOC if the article contains any heading
+    if ($("article h1, article  h2, article h3, article h4, article h5, article h6").length > 0) {
+        $(".toc").removeClass("d-none");
+    }
+</script>

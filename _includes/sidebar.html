@@ -1,16 +1,4 @@
-{% if page.layout == "post" %}
-    <script>
-        // Add TOC in sidebar if the article contains any heading
-        if ($("article h1, article  h2, article h3, article h4, article h5, article h6").length > 0) {
-            $(".sidebar").append(`
-                <div class="toc sticky-top">
-                    <p class="name">Table of Contents</p>
-                    <nav id="toc" data-toggle="toc" class="py-2"></nav>
-                </div>
-            `);
-        }
-    </script>
-{% endif %}
+{% include toc.html %}
 
 {% if page.layout != "post" and page.url != "/categories/" %}
     {% if site.github.public_repositories != null %}
