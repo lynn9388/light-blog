@@ -18,7 +18,7 @@ subtitle: "A simple and light Jekyll theme."
 description: This is a simple and light Jekyll theme.
 baseurl: "/light-blog"
 timezone: Asia/Shanghai
-side_bar_repo_limit: 5
+sidebar_repository_limit: 5
 paginate: 10
 
 # Author settings

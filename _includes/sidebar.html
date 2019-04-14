@@ -2,27 +2,27 @@
 
 {% if page.layout != "post" and page.url != "/categories/" %}
     {% if site.github.public_repositories != null %}
-        <div class="repo-list">
+        <div class="repository-list">
             <p class="name">My Popular Repositories</p>
             <div class="row">
-                {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
-                {% for repo in repos | limit: site.side_bar_repo_limit %}
+                {% assign repositories = site.github.public_repositories | sort: "stargazers_count" | reverse %}
+                {% for repository in repositories | limit: site.sidebar_repository_limit %}
                     <div class="col-sm-6 col-md-12 pb-3">
-                        <a class="repo-card btn rounded p-0" href="{{ repo.html_url }}">
+                        <a class="repository-card btn rounded p-0" href="{{ repository.html_url }}">
                             <div class="card p-1">
-                                <div class="name rounded center text-light geopattern" data-pattern-id="{{ repo.name }}">
-                                    {{ repo.name }}
+                                <div class="name rounded center text-light geopattern" data-pattern-id="{{ repository.name }}">
+                                    {{ repository.name }}
                                 </div>
                                 <div class="info center">
                                     <div class="p-2">
-                                        <div class="description mb-2">{{ repo.description }}</div>
+                                        <div class="description mb-2">{{ repository.description }}</div>
                                         <div>
                                             <span class="iconify" data-icon="octicon:star"></span>
-                                            <span class="pr-3">{{ repo.stargazers_count }}</span>
+                                            <span class="pr-3">{{ repository.stargazers_count }}</span>
                                             <span class="iconify" data-icon="octicon:repo-forked"></span>
-                                            <span class="pr-3">{{ repo.forks_count }}</span>
+                                            <span class="pr-3">{{ repository.forks_count }}</span>
                                             <span class="iconify" data-icon="octicon:clock"></span>
-                                            <span>{{ repo.updated_at | date: '%Y-%m-%d' }}</span>
+                                            <span>{{ repository.updated_at | date: '%Y-%m-%d' }}</span>
                                         </div>
                                     </div>
                                 </div>

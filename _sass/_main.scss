@@ -137,7 +137,7 @@ header {
 
 // Repository card
 
-.repo-card {
+.repository-card {
     width: 100%;
 
     .name {
@@ -162,12 +162,12 @@ header {
     }
 }
 
-.repo-card:hover {
+.repository-card:hover {
     opacity: 1;
     box-shadow: 0 0 12px rgba(33, 33, 33, .2);
 }
 
-.repo-card.btn {
+.repository-card.btn {
     border: none;
 }
 
