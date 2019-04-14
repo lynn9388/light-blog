@@ -7,7 +7,7 @@ permalink: /categories/
 <div class="category-list">
     {% assign categories = site.categories | sort %}
     {% for category in categories %}
-        <div class="name mb-3">{{ category[0] }}</div>
+        <div class="name text-capitalize mb-3" id="{{ category[0] }}">{{ category[0] }}</div>
         <ul class="text-muted">
             {% for post in category[1] %}
                 <li class="post mb-3">
