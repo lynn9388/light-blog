@@ -6,6 +6,9 @@ $secondary: #d26911;
 // Bootstrap and its default variables
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// Github style syntax highlighting Rouge stylesheet
+@import "rouge";
+
 // Custom variables
 $sidebar-border: 1px solid lightgray;
 $sidebar-border-radius: .25rem;
