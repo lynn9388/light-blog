@@ -1,56 +1,52 @@
 <div class="title-bar text-light mb-4" data-pattern-id="{{ page.title }}">
     <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                {% if page.name == "index.html" %}
-                    <!-- Home page title -->
-                    <div class="title-big pt-sm-3 pt-md-4">{{ site.subtitle }}</div>
-                    <div class="meta pb-1 pb-2 pb-sm-3 pb-md-4">
-                        <span class="pr-3">
-                            {% if site.social.github %}
-                                <span class="iconify" data-icon="octicon:mark-github"></span>
-                                <a class="text-light" href="https://github.com/{{ site.social.github }}"><span>{{ site.social.github }}</span></a>
-                            {% endif %}
-                        </span>
+        {% if page.name == "index.html" %}
+            <!-- Home page title -->
+            <div class="title-big pt-sm-3 pt-md-4">{{ site.subtitle }}</div>
+            <div class="meta pb-1 pb-2 pb-sm-3 pb-md-4">
+                <span class="pr-3">
+                    {% if site.social.github %}
+                        <span class="iconify" data-icon="octicon:mark-github"></span>
+                        <a class="text-light" href="https://github.com/{{ site.social.github }}"><span>{{ site.social.github }}</span></a>
+                    {% endif %}
+                </span>
 
-                        <span class="pr-3">
-                            {% if site.organization %}
-                                <span class="iconify" data-icon="octicon:organization"></span>
-                                <a class="text-light" href="https://github.com/{{ site.organization }}"><span>{{ site.organization }}</span></a>
-                            {% endif %}
-                        </span>
+                <span class="pr-3">
+                    {% if site.organization %}
+                        <span class="iconify" data-icon="octicon:organization"></span>
+                        <a class="text-light" href="https://github.com/{{ site.organization }}"><span>{{ site.organization }}</span></a>
+                    {% endif %}
+                </span>
 
-                        <span class="pr-3">
-                            {% if site.location %}
-                                <span class="iconify" data-icon="octicon:location"></span>
-                                <span>{{ site.location }}</span>
-                            {% endif %}
-                        </span>
-                    </div>
-                {% elsif page.collection == "posts" %}
-                    <!-- Post article title -->
-                    <div class="title pt-3">{{ page.title }}</div>
-                    <div class="meta pb-3">
-                        <span class="pr-3">
-                            {% if page.date %}
-                                <span class="iconify" data-icon="octicon:calendar"></span>
-                                <span>{{ page.date | date: "%Y/%m/%d" }}</span>
-                            {% endif %}
-                        </span>
-
-                        {% for category in page.categories %}
-                            <span class="title-bar-info pr-3">
-                                <span class="iconify" data-icon="octicon:tag"></span>
-                                <a class="text-light" href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
-                            </span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    <!-- Default title -->
-                    <div class="title py-1 py-sm-2 py-md-3">{{ page.title }}</div>
-                {% endif %}
+                <span class="pr-3">
+                    {% if site.location %}
+                        <span class="iconify" data-icon="octicon:location"></span>
+                        <span>{{ site.location }}</span>
+                    {% endif %}
+                </span>
             </div>
-        </div>
+        {% elsif page.collection == "posts" %}
+            <!-- Post article title -->
+            <div class="title pt-3">{{ page.title }}</div>
+            <div class="meta pb-3">
+                <span class="pr-3">
+                    {% if page.date %}
+                        <span class="iconify" data-icon="octicon:calendar"></span>
+                        <span>{{ page.date | date: "%Y/%m/%d" }}</span>
+                    {% endif %}
+                </span>
+
+                {% for category in page.categories %}
+                    <span class="title-bar-info pr-3">
+                        <span class="iconify" data-icon="octicon:tag"></span>
+                        <a class="text-light" href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+                    </span>
+                {% endfor %}
+            </div>
+        {% else %}
+            <!-- Default title -->
+            <div class="title py-1 py-sm-2 py-md-3">{{ page.title }}</div>
+        {% endif %}
     </div>
 </div>
 
