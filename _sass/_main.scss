@@ -114,6 +114,7 @@ header {
 
 .repository-card {
     width: 100%;
+    opacity: .8;
 
     .name {
         height: 120px;
@@ -123,7 +124,6 @@ header {
     .info {
         height: 80px;
         font-size: 12px;
-        opacity: .8;
 
         .iconify {
             font-size: 14px;
