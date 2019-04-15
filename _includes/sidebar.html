@@ -8,7 +8,7 @@
             <div class="row">
                 {% assign repositories = site.github.public_repositories | sort: "stargazers_count" | reverse %}
                 {% for repository in repositories | limit: site.sidebar_repository_limit %}
-                    <div class="col-sm-6 col-md-12 pb-3">
+                    <div class="col-sm-6 col-md-12 mb-3">
                         <a class="repository-card btn rounded p-0" href="{{ repository.html_url }}">
                             <div class="card p-1">
                                 <div class="name rounded center text-light geopattern" data-pattern-id="{{ repository.name }}">

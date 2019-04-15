@@ -4,7 +4,7 @@ layout: default
 
 <ul class="post-list pl-0">
     {% for post in paginator.posts %}
-        <li class="py-3">
+        <li class="pb-3">
             <a class="title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             <div class="excerpt" class="text-muted">{{ post.excerpt | strip_html | strip | truncate: 250 }}</div>
             <div class="info">
