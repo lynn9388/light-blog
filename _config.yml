@@ -52,10 +52,5 @@ plugins:
   - jemoji
   - rouge
 
-# Search settings
-simple_jekyll_search:
-  fulltext: false
-  limit: 10
-
 # Google Analytics settings
 ga_measurement_id:
