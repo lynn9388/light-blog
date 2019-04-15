@@ -37,6 +37,19 @@ collections:
   wiki:
     output: true
     permalink: /wiki/:path/
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "_wiki"
+    values:
+      layout: "post"
 kramdown:
   input: GFM
   math_engine: mathjax
