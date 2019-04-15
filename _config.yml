@@ -20,6 +20,7 @@ baseurl: "/light-blog"
 timezone: Asia/Shanghai
 sidebar_repository_limit: 5
 paginate: 10
+publication_date: 2019
 
 # Author settings
 author: Lynn
@@ -27,7 +28,6 @@ organization: HUST-IDC
 location: Wuhan, China
 social:
   github: lynn9388
-  email: lynn9388@gmail.com
 
 # Build settings
 encoding: UTF-8

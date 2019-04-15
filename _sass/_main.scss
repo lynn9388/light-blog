@@ -220,6 +220,26 @@ nav[data-toggle="toc"] {
 }
 
 
+// Footer
+
+footer {
+    font-size: 12px;
+
+    .feed {
+        font-size: 16px;
+    }
+
+    .github {
+        font-size: 30px;
+        opacity: .5;
+    }
+
+    .github:hover {
+        opacity: 1;
+    }
+}
+
+
 // Responsive text
 
 @include media-breakpoint-up(sm) {

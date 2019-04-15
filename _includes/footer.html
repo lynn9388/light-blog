@@ -1,8 +1,15 @@
-<footer class="container">
-    <hr>
-    <div class="d-flex justify-content-center">
-        {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}"><span class="iconify" data-icon="foundation:social-github" data-inline="false"></span></a>{% endif %}
-        {% if site.social.email %}<a href="mailto:{{ site.social.email }}"><span class="iconify" data-icon="foundation:mail" data-inline="false"></span></a>{% endif %}
-        <a href="{{ site.baseurl }}/feed.xml"><span class="iconify" data-icon="foundation:rss" data-inline="false"></span></a>
+<footer>
+    <hr class="my-0">
+    <div class="row align-items-center text-muted my-3">
+        <div class="col">
+            <span>© {{ site.publication_date }} {{ site.author }}</span>
+            <a href="{{ site.baseurl }}/feed.xml"><span class="feed iconify" data-icon="foundation:rss"></span></a>
+        </div>
+        <div class="col-auto text-center px-0">
+                <a href="{{ site.github.repository_url }}"><span class="github text-center text-muted iconify" data-icon="foundation:social-github"></span></a>
+        </div>
+        <div class="col text-right">
+            <a href="javascript:$('html,body').animate({ scrollTop: 0 }, 'slow');">TOP</a>
+        </div>
     </div>
 </footer>
