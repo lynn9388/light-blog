@@ -161,6 +161,15 @@ nav[data-toggle="toc"] {
     ul {
         padding: 1px 4px;
     }
+
+    .nav>li>a:focus,
+    .nav>li>a:hover,
+    .nav-link.active,
+    .nav-link.active:focus,
+    .nav-link.active:hover {
+        color: theme-color(secondary);
+        border-left-color: theme-color(secondary);
+    }
 }
 
 .content .toc {
