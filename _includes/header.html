@@ -11,7 +11,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav ml-auto">
-                {% for item in site.data.navigation %}
+                {% for item in site.navigation %}
                     <a class="nav-item nav-link text-right" href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}</a>
                 {% endfor %}
             </div>

@@ -43,6 +43,15 @@ collections:
   wiki:
     output: true
     permalink: /wiki/:path/
+navigation:
+  - name: Home
+    link: /
+  - name: Categories
+    link: /categories/
+  - name: Wiki
+    link: /wiki/
+  - name: About
+    link: /about/
 defaults:
   - scope:
       path: "pages"
