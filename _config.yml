@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Light Blog
-subtitle: "A simple and light Jekyll theme."
-description: This is a simple and light Jekyll theme.
+subtitle: A light and responsive Jekyll theme.
+description: This is a light and responsive Jekyll theme.
 baseurl: "/light-blog"
 timezone: Asia/Shanghai
 sidebar_repository_limit: 5
@@ -33,7 +33,7 @@ social:
 # You must use your own repository, otherwise it won't work.
 comments_repository: lynn9388/comments
 
-# Google Analytics settings
+# Google Analytics settings (https://analytics.google.com/)
 ga_measurement_id:
 
 # Build settings
