@@ -10,7 +10,7 @@
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# you will see them accessed via {{ site.title }}, {{ site.subtitle }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Light Blog
@@ -20,7 +20,7 @@ baseurl: "/light-blog"
 timezone: Asia/Shanghai
 sidebar_repository_limit: 5
 paginate: 10
-publication_date: 2019
+publication_date: 2019 # Used in copyright
 
 # Author settings
 author: Lynn
@@ -29,13 +29,15 @@ location: Wuhan, China
 social:
   github: lynn9388
 
+# Comments settings (https://utteranc.es/)
+# You must use your own repository, otherwise it won't work.
+comments_repository: lynn9388/comments
+
 # Google Analytics settings
 ga_measurement_id:
 
-# Comments settings (https://utteranc.es/)
-comments_repo: lynn9388/comments
-
 # Build settings
+# You don't need edit the content below, but still need keep it in your blog's _config.yml.
 encoding: UTF-8
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
