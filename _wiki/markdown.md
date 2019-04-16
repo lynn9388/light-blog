@@ -1,95 +1,81 @@
 ---
 title: Markdown
-categories: Markdown
+categories: markdown
 ---
 
-**目录**
+## Editor
 
-* TOC
-{:toc}
+[Visual Studio Code](https://code.visualstudio.com/)
 
-### 超链接
+## Syntax
 
-```
-[靠谱-ing](https://mazhuang.org)
+### Headers
 
-<https://mazhuang.org>
-```
+```markdown
+# H1
 
-[靠谱-ing](https://mazhuang.org)
+## H2
 
-<https://mazhuang.org>
+### H3
 
-### 列表
+#### H4
 
-```
-1. 有序列表项 1
+##### H5
 
-2. 有序列表项 2
-
-3. 有序列表项 3
+###### H6
 ```
 
-1. 有序列表项 1
+### Blockquotes
 
-2. 有序列表项 2
-
-3. 有序列表项 3
-
-```
-* 无序列表项 1
-
-* 无序列表项 2
-
-* 无序列表项 3
+```markdown
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+>
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
 ```
 
-* 无序列表项 1
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+>
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
 
-* 无序列表项 2
+### Lists
 
-* 无序列表项 3
+- Unordered
 
-```
-- [x] 任务列表 1
-- [ ] 任务列表 2
-```
+  ```markdown
+  - Red
+  - Green
+  - Blue
+  ```
 
-- [x] 任务列表 1
-- [ ] 任务列表 2
+  - Red
+  - Green
+  - Blue
 
-### 强调
+- Ordered
 
-```
-~~删除线~~
+  ```markdown
+  1. Red
+  1. Green
+  1. Blue
+  ```
 
-**加黑**
+  1. Red
+  1. Green
+  1. Blue
 
-*斜体*
-```
+- Task
 
-~~删除线~~
+  ```markdown
+  - [x] Task 1
+  - [ ] Task 2
+  ```
 
-**加黑**
+  - [x] Task 1
+  - [ ] Task 2
 
-*斜体*
+### Tables
 
-### 标题
-
-```
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-```
-
-Tips: `#` 与标题中间要加空格。
-
-### 表格
-
-```
+```markdown
 | HEADER1 | HEADER2 | HEADER3 | HEADER4 |
 | ------- | :------ | :-----: | ------: |
 | content | content | content | content |
@@ -99,54 +85,94 @@ Tips: `#` 与标题中间要加空格。
 | ------- | :------ | :-----: | ------: |
 | content | content | content | content |
 
-1. :----- 表示左对齐
-2. :----: 表示中对齐
-3. -----: 表示右对齐
+> - :----- Align left
+> - :----: Align center
+> - -----: Align right
 
-### 代码块
+### Text Formatting
 
-```python
-print 'Hello, World!'
+```markdown
+~~Strikethrough~~
+
+**Bold**
+
+*Italic*
 ```
 
-1. list item1
+~~Strikethrough~~
 
-2. list item2
+**Bold**
 
-   ```python
-   print 'hello'
-   ```
+*Italic*
 
-### 图片
+### Code
 
+- Inline Code
+
+  ```markdown
+  Inline `code` has `back-ticks around` it.
+  ```
+
+  Inline `code` has `back-ticks around` it.
+
+- Code Block
+
+  <pre><code>
+  ```java
+  if (2 > 1){
+      return true
+  }
+  ```
+  </code></pre>
+
+  ```java
+  if (2 > 1){
+      return true
+  }
+  ```
+
+  > We use [Linguist](http://https://github.com/github/linguist) to perform language detection and syntax highlighting. You can find out which keywords are valid in the [languages YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
+
+### Hyperlinks
+
+```markdown
+[GitHub](https://github.com/)
 ```
-![本站favicon](/favicon.ico)
+
+[GitHub](https://github.com/)
+
+### Images
+
+```markdown
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 ```
 
-![本站favicon](/favicon.ico)
-
-### 锚点
-
-```
-* [目录](#目录)
-```
-
-* [目录](#目录)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ### Emoji
 
-:camel:
-:blush:
-:smile:
+GitHub supports emoji!
+:+1: :sparkles: :camel: :tada:
+:rocket: :metal: :octocat:
+
+> [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 
 ### Footnotes
 
 This is a text with footnote[^1].
 
-### mathjax
+[^1]: Here is the footnote 1 definition.
+
+### MathJax
 
 When $$(a \ne 0)$$, there are two solutions to $$(ax^2 + bx + c = 0)$$ and they are
 
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-[^1]: Here is the footnote 1 definition.
+## References
+
+[Daring Fireball](https://daringfireball.net/projects/markdown/syntax)
+
+[GitHub](https://guides.github.com/features/mastering-markdown/)
+
+[GitHub Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)

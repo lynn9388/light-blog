@@ -1,7 +1,4 @@
 ---
-layout: post
 title: template page
-categories: [cate1, cate2]
+categories: [category, category]
 ---
-
-Content here
