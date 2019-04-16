@@ -1,0 +1,41 @@
+<nav>
+    <ur class="pagination">
+        {% if paginator.previous_page %}
+            <li class="page-item">
+                {% if paginator.previous_page == 1 %}
+                    <a class="page-link" href="{{ site.baseurl }}/" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                {% else %}
+                    <a class="page-link" href="{{ site.baseurl }}/page{{paginator.previous_page}}" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                {% endif %}
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" aria-label="Previous"><span aria-hidden="true">«</span></a>
+            </li>
+        {% endif %}
+
+        {% if paginator.page == 1 %}
+            <li class="page-item active"><a class="page-link">1<span class="sr-only">(current)</span></a></li>
+        {% else %}
+            <li class="page-item"><a class="page-link" href="{{ site.baseurl }}/">1</a></li>
+        {% endif %}
+
+        {% for count in (2..paginator.total_pages) %}
+            {% if count == paginator.page %}
+                <li class="page-item active"><a class="page-link">{{ count }}<span class="sr-only">(current)</span></a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="{{ site.baseurl }}/page{{ count }}">{{ count }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <li class="page-item">
+                <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next"><span aria-hidden="true">»</span></a>
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" aria-label="Next"><span aria-hidden="true">»</span></a>
+            </li>
+        {% endif %}
+    </ur>
+</nav>

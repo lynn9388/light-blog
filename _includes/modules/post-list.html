@@ -1,0 +1,24 @@
+<ul class="post-list pl-0">
+    {% for post in paginator.posts %}
+        <li class="pb-3">
+            <a class="title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <div class="excerpt" class="text-muted">{{ post.excerpt | strip_html | strip | truncate: 250 }}</div>
+            <div class="info">
+                <span class="pr-3">
+                    {% if post.date %}
+                        <span class="iconify" data-icon="octicon:calendar"></span>
+                        <span class="text-muted">{{ post.date | date: "%Y/%m/%d" }}</span>
+                    {% endif %}
+                </span>
+
+                {% for category in post.categories %}
+                    <span class="pr-3">
+                        <span class="iconify" data-icon="octicon:tag"></span>
+                        <a class="text-muted" href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+                    </span>
+                {% endfor %}
+            </div>
+        </li>
+        <hr>
+    {% endfor %}
+</ul>
