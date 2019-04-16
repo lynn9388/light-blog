@@ -29,6 +29,12 @@ location: Wuhan, China
 social:
   github: lynn9388
 
+# Google Analytics settings
+ga_measurement_id:
+
+# Comments settings (https://utteranc.es/)
+comments_repo: lynn9388/comments
+
 # Build settings
 encoding: UTF-8
 markdown: kramdown
@@ -64,6 +70,3 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - rouge
-
-# Google Analytics settings
-ga_measurement_id:
