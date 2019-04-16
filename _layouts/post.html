@@ -2,16 +2,16 @@
 layout: default
 ---
 
-{% include toc.html %}
+{% include modules/toc.html %}
 
 <article class="markdown-body">{{ content }}</article>
 
 {% if site.comments_repo %}
-<script src="https://utteranc.es/client.js"
-        repo="{{ site.comments_repo }}"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+    <script src="https://utteranc.es/client.js"
+            repo="{{ site.comments_repo }}"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
 {% endif %}

@@ -3,17 +3,4 @@ title: Categories
 permalink: /categories/
 ---
 
-<div class="category-list">
-    {% assign categories = site.categories | sort %}
-    {% for category in categories %}
-        <div class="name text-capitalize mb-3" id="{{ category[0] }}">{{ category[0] }}</div>
-        <ul class="text-muted">
-            {% for post in category[1] %}
-                <li class="post mb-3">
-                    <span class="date">{{ post.date | date:"%Y-%m-%d" }}</span>
-                    <a class="title text-muted" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-</div>
+{% include modules/category-list.html %}

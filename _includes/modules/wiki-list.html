@@ -1,0 +1,5 @@
+<ul class="wiki-list">
+    {% for wiki in site.wiki %}
+        <li><a href="{{ site.baseurl }}{{ wiki.url }}">{{ wiki.title }}</a></li>
+    {% endfor %}
+</ul>

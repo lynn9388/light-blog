@@ -1,0 +1,30 @@
+<div class="repository-list">
+    <p class="name">My Popular Repositories</p>
+    <div class="row">
+        {% assign repositories = site.github.public_repositories | sort: "stargazers_count" | reverse %}
+        {% for repository in repositories | limit: site.sidebar_repository_limit %}
+            <div class="col-sm-6 col-md-12 mb-3">
+                <a class="repository-card btn rounded p-0" href="{{ repository.html_url }}">
+                    <div class="card p-1">
+                        <div class="name rounded center text-light geopattern" data-pattern-id="{{ repository.name }}">
+                            {{ repository.name }}
+                        </div>
+                        <div class="info center">
+                            <div class="p-2">
+                                <div class="description mb-2">{{ repository.description }}</div>
+                                <div>
+                                    <span class="iconify" data-icon="octicon:star"></span>
+                                    <span class="pr-3">{{ repository.stargazers_count }}</span>
+                                    <span class="iconify" data-icon="octicon:repo-forked"></span>
+                                    <span class="pr-3">{{ repository.forks_count }}</span>
+                                    <span class="iconify" data-icon="octicon:clock"></span>
+                                    <span>{{ repository.updated_at | date: '%Y-%m-%d' }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
