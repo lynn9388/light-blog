@@ -55,7 +55,7 @@ Light Blog supports the normal post and wiki post. The last one is for common kn
 
 As an example of a blog's directory structure, your blog may looks like
 
-```
+```bash
 .
  |-favicon.ico
  |-index.html
