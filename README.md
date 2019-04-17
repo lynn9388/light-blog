@@ -1,49 +1,81 @@
-# light-blog
+# Light Blog
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+Light Blog is a light and responsive Jekyll theme, and it's easy to be used as a [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/).
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+Github Pages' remote theme is kind like a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes). The user doesn't need to worry about the theme files (like HTML, CSS, etc.), but focus on the posts.
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "light-blog"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: light-blog
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install light-blog
+> With gem-based themes, some of the site’s directories (such as the `assets`, `_layouts`, `_includes`, and `_sass` directories) are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+### Create Blog Repository
 
-## Contributing
+To create a blog with this theme, just follow these steps:
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+1. Create an initial repository in local with `git init [NAME]`, like
 
-## Development
+    ```bash
+    git init lynn9388.github.io
+    ```
 
-To set up your environment to develop this theme, run `bundle install`.
+1. Copy necessary files from light-blog to your own repository, includes
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+    ```bash
+    |-index.html
+    |-_config.yml
+    |-Gemfile
+    |-pages
+    | |-wiki.html
+    | |-404.html
+    | |-about.md
+    | |-categories.html
+    ```
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `light-blog.gemspec` accordingly.
+    You may also want to copy `.gitignore` to ignore temporary Jekyll files.
+
+1. Update `Gemfile` and `_config.yml` with your own settings. The key points are
+
+   - Comment `gemspec` and uncomment `gem "github-pages", group: :jekyll_plugins` in `Gemfile`
+   - Uncomment `remote_theme: lynn9388/light-blog` in `_config.yml`
+
+1. [Optional] Add `favicon.ico` to the root directory of the repository.
+
+That's all, your blog is done and ready to be published as a GitHub Pages. And as a convention, you should also add `LICENSE` and `README.me`.
+
+### Publish Blog
+
+After you create a blog locally, you can follow these step to publish in GitHub Pages
+
+1. [Add the local repository to GitHub](https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line)
+1. [Enable GitHub Pages to publish your site](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+
+### Add Content
+
+Light Blog supports the normal post and wiki post. The last one is for common knowledge and doesn't need a date. What you need to do is create two folders named `_posts` and `_wiki` for the first time, and put your content to the relevant folder when you want to add content to your blog.
+
+As an example of a blog's directory structure, your blog may looks like
+
+```
+.
+ |-favicon.ico
+ |-index.html
+ |-LICENSE
+ |-_posts
+ | |-2019-04-16-welcome-to-light-blog.md
+ | |-(MORE POST HERE)
+ |-_wiki
+ | |-markdown.md
+ | |-(MORE WIKI HERE)
+ |-README.md
+ |-.gitignore
+ |-_config.yml
+ |-Gemfile
+ |-pages
+ | |-wiki.html
+ | |-404.html
+ | |-about.md
+ | |-categories.html
+```
 
 ## Acknowledge
 
