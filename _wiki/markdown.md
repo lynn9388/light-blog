@@ -1,6 +1,5 @@
 ---
 title: Markdown
-categories: markdown
 ---
 
 ## Editor
@@ -68,10 +67,12 @@ categories: markdown
   ```markdown
   - [x] Task 1
   - [ ] Task 2
+  - [ ] Task 3
   ```
 
   - [x] Task 1
   - [ ] Task 2
+  - [ ] Task 3
 
 ### Tables
 
@@ -133,13 +134,23 @@ categories: markdown
 
   > We use [Linguist](http://https://github.com/github/linguist) to perform language detection and syntax highlighting. You can find out which keywords are valid in the [languages YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
 
-### Hyperlinks
+### Links
 
-```markdown
-[GitHub](https://github.com/)
-```
+- Anchor Link
 
-[GitHub](https://github.com/)
+  ```
+  [Syntax](#Syntax)
+  ```
+
+  [Syntax](#Syntax)
+
+- Hyperlinks
+
+  ```markdown
+  [GitHub](https://github.com/)
+  ```
+
+  [GitHub](https://github.com/)
 
 ### Images
 
