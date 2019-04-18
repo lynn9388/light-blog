@@ -5,7 +5,11 @@ categories: jekyll
 
 Light Blog is intended to be a [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/) for your personal site or blog in GitHub Pages, and it's quit easy to use. That means you don't need to folk [light-blog](https://github.com/lynn9388/light-blog) and then delete posts not belongs to you, but copy several files and change some settings. What's the best is you don't need to struggle on update your blog's theme anymore.
 
+If you are a blog user, you can follow [usage instruction](#Usage) to build your blog. Moreover, you can check [here](#Customization) to see how to customize it to meet your style.
+
 ## Usage
+
+When you use the Light Blog as a remote theme, you don't need to know what's inside and how it works.
 
 ### Create Blog Repository
 
@@ -94,3 +98,50 @@ lynn9388.github.io/
 | |-about.md
 | |-categories.html
 ```
+
+## Customization
+
+When you set light-blog as a remote theme in your site, your site doesn't have the theme files, but Jekyll will use the default layouts, includes, and stylesheets of light-blog to build your site. However, you can override any of the theme defaults with your own content.
+
+### Directory Structure
+
+The directory structure of Light Blog is almost the same with other Jekyll themes. Below are the theme files that you can override (except files with `*`).
+
+```bash
+light-blog/
+|-_includes                           # Theme includes
+| |-head.html                         # <head> tag for default layout
+| |-footer.html                       # Footer for default layout
+| |-modules                           # All reusable modules
+| | |-category-list-group.html        # List categories with post number in a list
+| | |-pagination.html                 # Pagination for post list
+| | |-wiki-list.html                  # List all wiki posts
+| | |-search-box.html                 # Search box
+| | |-toc.html                        # Table of contents
+| | |-post-list.html                  # List posts based on pagination
+| | |-google-analytics.html           # * Google Analytics
+| | |-category-list.html              # List all categories with posts
+| | |-comments.html                   # Comments based on GitHub issues
+| | |-repository-list.html            # List some of your repositories
+| |-sidebar.html                      # Sidebar on the right
+| |-header.html                       # Header for every page on the top
+| |-title-bar.html                    # Title bar for every page
+|-index.html                          # Home page
+|-_layouts                            # Theme layouts
+| |-post.html                         # Layout for posts and wiki to show content
+| |-default.html                      # Basic layout for every page
+|-_sass                               # CSS with Sass
+| |-_main.scss                        # Main CSS file
+| |-_rouge.scss                       # CSS for code syntax highlighting
+|-assets                              # Assets files
+| |-search.json                       # Rules to generate search database for search box
+| |-css                               # Style sheets
+| | |-main.scss                       # * Import CSS from `_sass`
+|-pages                               # Pages made from layouts and includes
+| |-wiki.html                         # Wiki page shows wiki list
+| |-404.html                          # 404 page
+| |-about.md                          # About page introduces the site
+| |-categories.html                   # Categories page shows category list
+```
+
+To modify theses theme files, just make a copy of the file that you want to customize and place it in your site's directory with the same path showed above. For details, please check the [Jekyll doc](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) to see how to override theme defaults.
