@@ -8,11 +8,7 @@ Github Pages' remote theme is kind like a [gem-based theme](https://jekyllrb.com
 
 ## Usage
 
-Check out the [post](https://lynn9388.github.io/light-blog/2019/04/16/getting-started/) for more info on how to use this theme in your site.
-
-## Contributing
-
-Bug reports and pull requests are welcome. There are also more info in the theme's [demo](https://lynn9388.github.io/light-blog/).
+Check out the [post](https://lynn9388.github.io/2019/04/18/getting-started-with-light-blog/) for more info on how to use this theme in your site.
 
 ## Acknowledge
 
