@@ -1,11 +1,21 @@
-<div class="toc d-none mb-2">
+<div class="toc-container mb-2">
     <p class="name">Table of Contents</p>
-    <nav id="toc" class = "py-1" data-toggle="toc"></nav>
+    <div class="toc py-2 pr-2 mb-2"></div>
 </div>
 
 <script>
     // Show TOC if the article contains any heading
-    if ($("article h1, article  h2, article h3, article h4, article h5, article h6").length > 0) {
-        $(".toc").removeClass("d-none");
+    if ($("article h1, article  h2, article h3, article h4, article h5, article h6").length == 0) {
+        $(".toc-container").addClass("d-none");
     }
+
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: ".toc",
+        // Where to grab the headings to build the table of contents.
+        contentSelector: "article",
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: "h1, h2, h3, h4, h5, h6",
+        collapseDepth: 6,
+    });
 </script>

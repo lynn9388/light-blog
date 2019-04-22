@@ -149,52 +149,48 @@ header {
 
 // Table of contents
 
-nav[data-toggle="toc"] {
-    border: $sidebar-border;
-    border-radius: $border-radius;
+.toc-container {
+    display: block;
+    top: 42px;
+    position: sticky;
+    position: -webkit-sticky;
 
-    // Expand nested second-level navigation item
-    .nav .nav {
-        display: block;
-    }
-
-    ul {
-        padding: 1px 4px;
-    }
-
-    .nav>li>a:focus,
-    .nav>li>a:hover,
-    .nav-link.active,
-    .nav-link.active:focus,
-    .nav-link.active:hover {
-        color: theme-color(secondary);
-        border-left-color: theme-color(secondary);
-    }
-}
-
-.content .toc {
     .name {
-        font-size: 16px;
         margin-bottom: 6px;
     }
-}
 
-// Hide sidebar TOC in small screen
-.sidebar .toc {
-    display: none;
-}
+    .toc {
+        border: $sidebar-border;
+        border-radius: $border-radius;
+        font-size: 12px;
+        color: gray;
 
-// Only show sidebar TOC in larger screen
-@include media-breakpoint-up(md) {
-    .content .toc {
-        display: none;
-    }
+        a.toc-link {
+            height: 0%;
+            text-decoration:none;
+        }
 
-    .sidebar .toc {
-        display: block;
-        top: 42px;
-        position: sticky;
-        position: -webkit-sticky;
+        .toc-list {
+            padding-left: 15px;
+        }
+
+        > .toc-list {
+            > .toc-list-item {
+                margin-bottom: 8px;
+
+                > a {
+                    font-size: 14px;
+                }
+            }
+
+            > .toc-list-item:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        .is-active-link {
+            color: theme-color(primary);
+        }
     }
 }
 

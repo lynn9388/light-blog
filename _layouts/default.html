@@ -5,11 +5,11 @@
         {% include header.html %}
         {% include title-bar.html %}
         <div class="container">
-            <div class="row my-4">
+            <div class="row my-2 my-md-4">
                 <div class="content col-md-8">
                     {{ content }}
                 </div>
-                <div class="sidebar col-md-4 mt-3 mt-md-0">
+                <div class="sidebar col-md-4 mt-2 mt-md-0">
                     {% include sidebar.html %}
                 </div>
             </div>
@@ -17,3 +17,10 @@
         </div>
     </body>
 </html>
+
+<script>
+    {% if page.layout == "post" %}
+        $(".content").addClass("order-12 order-md-1");
+        $(".sidebar").addClass("order-1 order-md-12");
+    {% endif %}
+</script>
