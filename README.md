@@ -1,5 +1,7 @@
 # Light Blog
 
+![Screenshot](screenshot.png)
+
 Light Blog is a light and responsive Jekyll theme, and it's easy to be used as a [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/).
 
 Github Pages' remote theme is kind like a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes). The user doesn't need to worry about the theme files (like HTML, CSS, etc.), but focus on the posts. When the theme is separated with your content, it's easier to deployed and update your site.
