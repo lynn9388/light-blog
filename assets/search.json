@@ -5,7 +5,7 @@
 {% capture json %}
     [
         {% for page in site.pages %}
-            {% if page.title != nil %}
+            {% if page.title != nil and page.url != "/404.html" and page.url != "/categories/" and page.url != "/wiki/" %}
                 {
                     "title"    : "{{ page.title | escape }}",
                     "url"      : "{{ site.baseurl }}{{ page.url }}",
