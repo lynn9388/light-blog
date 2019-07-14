@@ -4,12 +4,12 @@
     {% include modules/toc.html %}
 {% endif %}
 
-{% if page.layout != "post" and page.url != "/categories/" %}
+{% if page.layout != "post" and page.url != "/archive/" %}
     {% if site.github.public_repositories != null %}
         {% include modules/repository-list.html %}
     {% endif %}
 {% endif %}
 
-{% if page.url == "/categories/" %}
-    {% include modules/category-list-group.html %}
+{% if page.url == "/archive/" %}
+    {% include modules/tag-list-group.html %}
 {% endif %}

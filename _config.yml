@@ -52,8 +52,8 @@ collections:
 navigation:
   - name: Home
     link: /
-  - name: Categories
-    link: /categories/
+  - name: Archive
+    link: /archive/
   - name: Wiki
     link: /wiki/
   - name: About

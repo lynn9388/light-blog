@@ -11,10 +11,10 @@
                     {% endif %}
                 </span>
 
-                {% for category in post.categories %}
+                {% for tag in post.tags %}
                     <span class="pr-3">
                         <span class="iconify" data-icon="octicon:tag"></span>
-                        <a class="text-muted" href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+                        <a class="text-muted" href="{{ site.baseurl }}/archive/#{{ tag }}">{{ tag }}</a>
                     </span>
                 {% endfor %}
             </div>
