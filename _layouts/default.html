@@ -21,6 +21,10 @@
 <script>
     anchors.add();
 
+    $("p img").each(function() {
+        $(this).wrapAll("<a data-fancybox data-caption='" + this.alt + "' href='" + this.src + "'></a>");
+    });
+
     {% if page.layout == "post" %}
         $(".content").addClass("order-12 order-md-1");
         $(".sidebar").addClass("order-1 order-md-12");
