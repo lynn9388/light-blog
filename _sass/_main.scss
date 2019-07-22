@@ -12,6 +12,7 @@ $secondary: #d26911;
 // Custom variables
 $sidebar-border: 1px solid lightgray;
 $sidebar-border-radius: .25rem;
+$shadow: 0 0 12px rgba(33, 33, 33, .2);
 
 
 // Global style
@@ -90,6 +91,13 @@ header {
 }
 
 
+// Image
+
+p img {
+    filter: drop-shadow($shadow);
+}
+
+
 // Sidebar
 
 .sidebar {
@@ -139,7 +147,7 @@ header {
 
 .repository-card:hover {
     opacity: 1;
-    box-shadow: 0 0 12px rgba(33, 33, 33, .2);
+    box-shadow: $shadow;
 }
 
 .repository-card.btn {
@@ -282,6 +290,7 @@ footer {
         font-size: 24px;
     }
 }
+
 
 // Responsive iframe
 // Modified from https://github.com/nathancy/jekyll-embed-video
