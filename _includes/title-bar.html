@@ -1,4 +1,4 @@
-<div class="title-bar text-light" data-pattern-id="{{ page.title }}">
+<div class="title-bar text-light">
     <div class="container">
         {% if page.name == "index.html" %}
             <!-- Home page title -->
@@ -54,6 +54,6 @@
     {% if page.name == "index.html" %}
         $(".title-bar").addClass("bg-primary");
     {% else %}
-        $(".title-bar").addClass("geopattern");
+        $(".title-bar").geopattern("{{ page.title }}");
     {% endif %}
 </script>

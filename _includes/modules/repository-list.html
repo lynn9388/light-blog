@@ -6,7 +6,7 @@
             <div class="col-sm-6 col-md-12 mb-3">
                 <a class="repository-card btn rounded p-0" href="{{ repository.html_url }}">
                     <div class="card p-1">
-                        <div class="name rounded center text-light geopattern" data-pattern-id="{{ repository.name }}">
+                        <div class="name rounded center text-light">
                             {{ repository.name }}
                         </div>
                         <div class="info center">
@@ -28,3 +28,9 @@
         {% endfor %}
     </div>
 </div>
+
+<script>
+    $(".repository-card .name").each(function () {
+        $(this).geopattern($(this).text().trim());
+    });
+</script>
