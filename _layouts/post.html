@@ -5,3 +5,8 @@ layout: default
 <article class="markdown-body">{{ content }}</article>
 
 {% include modules/comments.html %}
+
+<script>
+    $(".content").addClass("order-last order-md-first");
+    $(".sidebar").addClass("order-first order-md-last");
+</script>
