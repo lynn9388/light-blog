@@ -13,24 +13,3 @@ layout: base
         </div>
     </div>
 </div>
-
-<script>
-    anchors.add();
-
-    $("p img").each(function() {
-        $(this).wrapAll('<a data-fancybox="images" data-caption="' + this.alt + '" href="' + this.src + '"></a>');
-    });
-    $('[data-fancybox="images"]').fancybox({
-        transitionEffect: "slide",
-
-        // Support for retina displays.
-        afterLoad : function(instance, current) {
-            var pixelRatio = window.devicePixelRatio || 1;
-
-            if ( pixelRatio > 1.5 ) {
-                current.width  = current.width  / pixelRatio;
-                current.height = current.height / pixelRatio;
-            }
-        }
-    });
-</script>
