@@ -16,7 +16,7 @@
 title: Light Blog
 subtitle: A light and responsive Jekyll theme.
 description: This is a light and responsive Jekyll theme.
-baseurl: "/light-blog"
+baseurl: /light-blog
 timezone: Asia/Shanghai
 sidebar_repository_limit: 5
 paginate: 10
@@ -39,16 +39,12 @@ comments_repository: lynn9388/comments
 # Google Analytics settings (https://analytics.google.com/)
 ga_measurement_id:
 
-# Build settings
+# Build settings (https://help.github.com/en/articles/configuring-jekyll)
 # If you use this theme as a Github Pages's remote theme, you don't need to edit the
 # content below, but still need to keep it in your blog's _config.yml.
-encoding: UTF-8
-markdown: kramdown
-permalink: /:year/:month/:day/:title/
 collections:
   wiki:
     output: true
-    permalink: /wiki/:path/
 navigation:
   - name: Home
     link: /
@@ -60,27 +56,21 @@ navigation:
     link: /about/
 defaults:
   - scope:
-      path: "pages"
+      path: pages
     values:
-      layout: "default"
+      layout: default
   - scope:
-      path: "_posts"
+      path: _posts
     values:
-      layout: "post"
+      layout: post
   - scope:
-      path: "_wiki"
+      path: _wiki
     values:
-      layout: "post"
-kramdown:
-  input: GFM
-  math_engine: mathjax
-  syntax_highlighter: rouge
+      layout: post
 sass:
   style: compressed
 plugins:
   - jekyll-feed
-  - jekyll-github-metadata
-  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
