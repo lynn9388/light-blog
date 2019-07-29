@@ -21,7 +21,7 @@
                 <span class="pr-3">
                     {% if site.location %}
                         <span class="iconify" data-icon="octicon:location"></span>
-                        <span>{{ site.location }}</span>
+                        <a class="text-light" href="https://www.google.com/maps/search/?api=1&query={{ site.location }}"><span>{{ site.location }}</span></a>
                     {% endif %}
                 </span>
             </div>
