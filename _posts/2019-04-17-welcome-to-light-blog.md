@@ -7,7 +7,7 @@ Light Blog is a light and responsive Jekyll theme. The purpose of this theme is 
 
 ## Getting Started
 
-[Getting Started with Light Blog](https://lynn9388.github.io/2019/04/18/getting-started-with-light-blog/): getting started to use Light Blog and deploy it in GitHub Pages, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
+[Getting Started with Light Blog](https://lynn9388.github.io/2019/04/18/getting-started-with-light-blog.html): getting started to use Light Blog and deploy it in GitHub Pages, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
 
 ## Questions?
 
