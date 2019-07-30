@@ -1,15 +1,10 @@
 ---
-layout: base
+layout: base-titlebar
 ---
 
-{% include titlebar.html %}
-<div class="container">
-    <div class="row my-2 my-md-4">
-        <div class="content col-md-8">
-            {{ content }}
-        </div>
-        <div class="sidebar col-md-4 mt-2 mt-md-0">
-            {% include sidebar.html %}
-        </div>
-    </div>
+<div class="content col-md-8">
+    {{ content }}
+</div>
+<div class="sidebar col-md-4 mt-2 mt-md-0">
+    {% include sidebar.html %}
 </div>
