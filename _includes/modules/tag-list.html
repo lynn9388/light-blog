@@ -1,7 +1,7 @@
 <div class="tag-list">
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
-        <div class="name text-capitalize mb-3" id="{{ tag[0] }}">{{ tag[0] }}</div>
+        <div class="name mb-3" id="{{ tag[0] }}">{{ tag[0] }}</div>
         <ul class="text-muted">
             {% for post in tag[1] %}
                 <li class="post mb-3">
