@@ -1,6 +1,6 @@
 ---
 title:  Welcome to Light Blog!
-tags: jekyll
+tags: Jekyll
 ---
 
 Light Blog is a light and responsive Jekyll theme. The purpose of this theme is to provide a [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/) for your personal site or blog. This site is a demo of the theme, but you should check [my blog](https://lynn9388.github.io/) to see more details about this theme.
